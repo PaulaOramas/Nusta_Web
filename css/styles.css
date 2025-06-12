@@ -1,0 +1,163 @@
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #6a4c9c; /* Púrpura suave */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 2px solid #5c3a7a;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons .btn {
+    background-color: #9577c5;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    display: inline-block; /* Asegura que el botón se vea como un bloque en línea */
+    margin-bottom: 20px; /* Espacio debajo del botón */
+}
+
+.cta-buttons .btn:hover {
+    background-color: #8255a1;
+}
+
+.app-stores {
+    margin-top: 20px; /* Espacio entre el botón y los iconos de las tiendas */
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 20px; /* Añade un espacio entre los íconos */
+    background-color: #af99d2;
+    width: 150px;
+    height: auto;
+    border-radius: 16px;
+    margin-left: auto;   /* Centra el div horizontalmente */
+    margin-right: auto; 
+}
+
+.app-stores:hover {
+    background-color: #8255a1;
+    transform: scale(1.2); /* Efecto zoom */
+}
+
+.app-stores a {
+    display: inline-block;
+    color: white;
+}
+
+.app-stores img {
+    width: 100px;
+    height: auto;
+}
+
+
+/* Características */
+.features {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.feature {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1.1rem;
+}
+
+/* Testimonios */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #6a4c9c;
+    color: white;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 5px;
+    color: #d3c6e4;
+}
+
+/* Botón de Descarga */
+.download {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.download h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.download .cta-buttons .btn {
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #5c3a7a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
