@@ -138,5 +138,32 @@
             <strong>Teléfono de soporte:</strong> 0967111360
         </p>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container fade-in-on-scroll">
+            <p>&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
+            <a href="./politicaPrivacidad.html">Política de privacidad</a>
+            <a href="./acercaDe.html">Acerca de</a>
+            <a href="#">Síguenos en redes sociales</a>
+        </div>
+    </footer>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+});
+</script>
 </body>
 </html>

@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Iceberg&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Revalia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .logo {
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-size: 5rem;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 40px;
+}
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -15,8 +27,8 @@
         <div class="nav-container">
             <a href="#" class="logo">Ñusta Kawsay</a>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="../Nusta_Web/pages/">Características</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#descarga">Descarga</a></li>
             </ul>
@@ -118,12 +130,13 @@
     <footer>
         <div class="container fade-in-on-scroll">
             <p>&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
-            <a href="pages/politicaPrivacidad.html">Política de privacidad</a>
+            <a href="./pages/politicaPrivacidad.html">Política de privacidad</a>
+            <a href="./pages/acercaDe.html">Acerca de</a>
             <a href="#">Síguenos en redes sociales</a>
         </div>
     </footer>
 
-    <script>
+  <script>
 document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
