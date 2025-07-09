@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de | Ñusta Kawsay</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #d3b3e6;
+            color: #222;
+            font-family: 'Quicksand', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .acerca-container {
+            background: #fff;
+            max-width: 900px;
+            margin: 80px auto 40px auto;
+            padding: 48px 36px 40px 36px;
+            border-radius: 28px;
+            box-shadow: 0 6px 32px rgba(170, 124, 197, 0.18);
+        }
+        .logo-puce {
+            display: block;
+            margin: 0 auto 36px auto;
+            max-width: 220px;
+            width: 60%;
+            min-width: 120px;
+            transition: transform 0.2s;
+        }
+        .logo-puce:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+        h1 {
+            color: #aa7cc5;
+            text-align: center;
+            margin-bottom: 22px;
+            font-size: 2.4rem;
+            letter-spacing: 1px;
+        }
+        h2 {
+            color: #8255a1;
+            margin-top: 38px;
+            margin-bottom: 14px;
+            font-size: 1.35rem;
+        }
+        p {
+            font-size: 1.13rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+        ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.08rem;
+        }
+        /* Cambia solo el logo del header */
+.logo {
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-size: 5rem;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 40px;
+}
+
+/* Mantén el menú a la derecha */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 100px;
+}
+
+/* Ajusta el tamaño del menú para que combine */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-weight: 600;
+}
+
+        @media (max-width: 700px) {
+            .acerca-container {
+                padding: 18px 4vw;
+            }
+            .logo-puce {
+                max-width: 140px;
+                width: 80%;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+            h2 {
+                font-size: 1.08rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Ñusta Kawsay</a>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#descarga">Descarga</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="acerca-container">
+        <img src="../images/logtipoPuce.png" alt="Logotipo de la PUCE" class="logo-puce">
+        <h1>Acerca de Ñusta Kawsay</h1>
+        <p>
+            <strong>Ñusta Kawsay</strong> es una aplicación desarrollada como botón de pánico para ayudar a mujeres en situaciones de violencia de género. Permite a las usuarias pedir ayuda de manera rápida y discreta: al presionar el botón, se envía un mensaje a Telegram con la ubicación y los contactos a llamar. La app puede usarse con o sin iniciar sesión, adaptándose a las necesidades de cada mujer.
+        </p>
+        <h2>Sobre el Proyecto</h2>
+        <p>
+            Este proyecto fue concebido y desarrollado por estudiantes de la carrera de Ingeniería en Sistemas de Información de la Pontificia Universidad Católica del Ecuador (PUCE), en el marco de la asignatura "Emprendimiento Tecnológico con Emprendimientos Sociales", bajo la guía del Profesor Francisco Rodríguez Clavijo. Se realizó bajo la modalidad de Aprendizaje Servicio, aplicando conocimientos tecnológicos para generar un impacto social positivo y directo.
+        </p>
+        <p>
+            Agradecemos el invaluable apoyo y auspicio de la Coordinación Nacional de Innovación Educativa y Desarrollo Docente, y la Coordinación Nacional de Aprendizaje Servicio de la PUCE, sin cuyo respaldo este proyecto no habría sido posible.
+        </p>
+        <h2>Equipo de Desarrollo</h2>
+        <ul>
+            <li><strong>Danahé Andrade</strong> – Jefe de Grupo, Desarrolladora FrontEnd</li>
+            <li><strong>Abigail Arteaga</strong> – Desarrolladora Full Stack</li>
+            <li><strong>Paula Oramas</strong> – Desarrolladora Full Stack</li>
+        </ul>
+        
+    </div>
+ <!-- Footer -->
+    <footer>
+        <div class="container fade-in-on-scroll">
+            <p>&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
+            <a href="./politicaPrivacidad.html">Política de privacidad</a>
+            <a href="./acercaDe.html">Acerca de</a>
+            <a href="#">Síguenos en redes sociales</a>
+        </div>
+    </footer>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+});
+</script>
+
+    
+</body>
+
+
+
+</html>
