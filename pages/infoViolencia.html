@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title id="violence-title-head">Violencia de Género – Información y Acción</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #d3b3e6;
+      color: #222;
+      font-family: 'Quicksand', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .main-nav {
+      background: #aa7cc5;
+      width: 100%;
+      position: relative;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 100px;
+    }
+    .logo {
+      font-family: 'Montserrat', Arial, sans-serif !important;
+      font-size: 2.2rem;
+      color: #fff;
+      letter-spacing: 2px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-right: 40px;
+      white-space: nowrap;
+    }
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+    }
+    .main-nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.2s;
+      font-family: 'Quicksand', Arial, sans-serif;
+      font-weight: 600;
+    }
+    #language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 24px;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 54px;
+      height: 28px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 28px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #aa7cc5;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    #language-label {
+      font-size: 1rem;
+      color: #222;
+      font-weight: bold;
+    }
+    .violence-container {
+      background: #fff;
+      max-width: 900px;
+      margin: 110px auto 40px auto;
+      padding: 48px 36px 40px 36px;
+      border-radius: 28px;
+      box-shadow: 0 6px 32px rgba(170, 124, 197, 0.18);
+    }
+    h1, h2 {
+      color: #aa7cc5;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: 2.1rem;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 38px;
+      margin-bottom: 14px;
+    }
+    .stats {
+      font-size: 1.08rem;
+      margin: 10px 0;
+      color: #8255a1;
+    }
+    ul {
+      padding-left: 22px;
+      margin-bottom: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+    .cta {
+      background: #aa7cc5;
+      color: white;
+      padding: 18px;
+      text-align: center;
+      margin: 32px 0 24px 0;
+      border-radius: 16px;
+      font-size: 1.15rem;
+      box-shadow: 0 2px 12px rgba(170, 124, 197, 0.12);
+    }
+    a.button {
+      background: #8255a1;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: bold;
+      font-size: 1.08rem;
+      transition: background 0.2s;
+    }
+    a.button:hover {
+      background: #aa7cc5;
+    }
+    footer {
+      background: #aa7cc5;
+      color: #fff;
+      font-size: 0.95em;
+      text-align: center;
+      padding: 18px 0;
+      margin-top: 40px;
+      border-radius: 0 0 20px 20px;
+    }
+    @media (max-width: 700px) {
+      .violence-container {
+        padding: 18px 4vw;
+      }
+      h1 {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 1.08rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">Ñusta Kawsay</a>
+      <ul>
+        <li><a href="../index.html" id="nav-inicio">Inicio</a></li>
+        <li><a href="infoViolencia.html" id="nav-violencia">Violencia</a></li>
+        <li><a href="politicaPrivacidad.html" id="nav-privacidad">Privacidad</a></li>
+        <li><a href="acercaDe.html" id="nav-acerca">Acerca de</a></li>
+      </ul>
+      <div id="language-switcher">
+        <label for="language-toggle" class="switch">
+          <input type="checkbox" id="language-toggle">
+          <span class="slider"></span>
+        </label>
+        <span id="language-label">Español</span>
+      </div>
+    </div>
+  </nav>
+  <div class="violence-container">
+    <header>
+      <h1 id="violence-title">Una de cada tres mujeres sufre violencia física o sexual a lo largo de su vida</h1>
+      <p class="stats" id="violence-stat1">A nivel mundial, 1 de cada 3 mujeres ha sufrido violencia física y/o sexual.</p>
+      <p class="stats" id="violence-stat2">En Ecuador, 60,6 % de mujeres han vivido algún tipo de violencia de género (psicológica, física, sexual o patrimonial).</p>
+    </header>
+    <section>
+      <h2 id="violence-types-title">Tipos de violencia</h2>
+      <ul>
+        <li id="violence-type1"><strong>Psicológica</strong>: el 53,9 % de mujeres en Ecuador ha experimentado este tipo.</li>
+        <li id="violence-type2"><strong>Física</strong>: afecta al 38,0 % de mujeres en Ecuador.</li>
+        <li id="violence-type3"><strong>Sexual</strong>: 1 de cada 4 mujeres en Ecuador ha sido víctima.</li>
+        <li id="violence-type4"><strong>Patrimonial</strong>: 16,7 % de mujeres en Ecuador han sufrido control financiero.</li>
+        <li id="violence-type5"><strong>Gineco-obstétrica</strong>: incluye violencia durante atención médica.</li>
+      </ul>
+    </section>
+    <section>
+      <h2 id="violence-key-title">Cifras clave</h2>
+      <ul>
+        <li id="violence-key1">Globalmente, el 35 % de las mujeres han sufrido violencia física o sexual.</li>
+        <li id="violence-key2">El 30 % de las mujeres en relaciones han sufrido violencia de pareja.</li>
+        <li id="violence-key3">El 38 % de los homicidios de mujeres son cometidos por la pareja.</li>
+        <li id="violence-key4">El 24 % de las adolescentes de 15‑19 años han sufrido violencia por parte de su pareja.</li>
+      </ul>
+    </section>
+    <section>
+      <h2 id="violence-risk-title">Factores de riesgo y causas</h2>
+      <p id="violence-risk-text">Algunos de los factores asociados son: bajo nivel educativo, experiencias de violencia en la infancia y normas culturales que normalizan la desigualdad.</p>
+    </section>
+    <section>
+      <h2 id="violence-health-title">Impacto en la salud</h2>
+      <p id="violence-health-text">La violencia de género es una grave violación de derechos humanos y un problema de salud pública. Afecta la salud física, mental, sexual y reproductiva de las mujeres.</p>
+    </section>
+    <section>
+      <h2 id="violence-legal-title">Marco legal y compromiso institucional</h2>
+      <p id="violence-legal-text">En Ecuador, la violencia de género se reconoce como discriminación y está en línea con la ODS 5, la Convención de Belém do Pará y CEDAW.</p>
+    </section>
+    <section>
+      <h2 id="violence-prevent-title">Prevención y respuesta</h2>
+      <p id="violence-prevent-text1">Organismos como la OMS/OPS recomiendan una respuesta multisectorial: salud, justicia, educación y formación para detección temprana.</p>
+      <p id="violence-prevent-text2">Campañas globales como #NoHayExcusa y la Iniciativa Spotlight promueven la erradicación de esta violencia.</p>
+    </section>
+    <section class="cta">
+      <h2 id="violence-action-title">Llamados a la acción</h2>
+      <p id="violence-action1">✅ <strong>Educa:</strong> Aprende a identificar los tipos de violencia.</p>
+      <p id="violence-action2">✅ <strong>Denuncia:</strong> Contacta ministerios, líneas de ayuda e institutos especializados.</p>
+      <p id="violence-action3">✅ <strong>Apoya:</strong> Acompaña a las víctimas y promueve la prevención.</p>
+      <p id="violence-action4">✅ <strong>Exige:</strong> Políticas públicas efectivas y fondos para igualdad.</p>
+      <a href="#recursos" class="button" id="violence-action-btn">Conoce los recursos disponibles</a>
+    </section>
+    <section id="recursos">
+      <h2 id="violence-resource-title">Recursos y enlaces útiles</h2>
+      <ul>
+        <li><a href="https://www.ecuadorencifras.gob.ec/violencia-de-genero/">INEC – Violencia de Género en Ecuador</a></li>
+        <li><a href="https://www.unwomen.org/">ONU Mujeres – Datos y cifras globales</a></li>
+        <li><a href="https://www.paho.org/">OPS/OMS – Violencia contra la mujer en las Américas</a></li>
+        <li><a href="https://www.unesco.org/">UNESCO – Campaña #NoHayExcusa</a></li>
+        <li><a href="https://www.unwomen.org/global-database-on-violence-against-women">Global database ONU Mujeres</a></li>
+      </ul>
+    </section>
+  </div>
+  <footer>
+    <p id="footer-copy">&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
+    <a id="footer-privacy" href="./politicaPrivacidad.html">Política de privacidad</a>
+    <a id="footer-about" href="./acercaDe.html">Acerca de</a>
+    <a id="footer-social" href="#">Síguenos en redes sociales</a>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Idioma persistente
+      const idiomaGuardado = localStorage.getItem('nusta-idioma');
+      if (idiomaGuardado === 'kichwa') {
+        document.getElementById('language-toggle').checked = true;
+        document.getElementById('language-label').textContent = 'Kichwa';
+        changeLanguage('kichwa');
+      } else {
+        document.getElementById('language-toggle').checked = false;
+        document.getElementById('language-label').textContent = 'Español';
+        changeLanguage('espanol');
+      }
+
+      document.getElementById('language-toggle').addEventListener('change', function() {
+        if (this.checked) {
+          document.getElementById('language-label').textContent = 'Kichwa';
+          localStorage.setItem('nusta-idioma', 'kichwa');
+          changeLanguage('kichwa');
+        } else {
+          document.getElementById('language-label').textContent = 'Español';
+          localStorage.setItem('nusta-idioma', 'espanol');
+          changeLanguage('espanol');
+        }
+      });
+    });
+
+    function changeLanguage(language) {
+      if (language === 'kichwa') {
+        document.title = 'Kawsay Warmikuna – Yachaykuna';
+        document.getElementById('violence-title').textContent = 'Kimsa warmikuna huk kawsaypi chinkaykuna rurashka';
+        document.getElementById('violence-stat1').textContent = 'Pachapi, kimsa warmikuna huk kawsaypi chinkaykuna rurashka.';
+        document.getElementById('violence-stat2').textContent = 'Ecuadorpi, 60,6 % warmikuna kawsaykuna chinkaykuna (shimi, ruray, kawsay, patrimonial).';
+        document.getElementById('violence-types-title').textContent = 'Kawsaykuna';
+        document.getElementById('violence-type1').innerHTML = '<strong>Shimi</strong>: 53,9 % warmikuna Ecuadorpi kaykuna rurashka.';
+        document.getElementById('violence-type2').innerHTML = '<strong>Ruray</strong>: 38,0 % warmikuna Ecuadorpi.';
+        document.getElementById('violence-type3').innerHTML = '<strong>Sexual</strong>: kimsa warmikuna huk Ecuadorpi chinkaykuna.';
+        document.getElementById('violence-type4').innerHTML = '<strong>Patrimonial</strong>: 16,7 % warmikuna Ecuadorpi financiero kawsaykuna.';
+        document.getElementById('violence-type5').innerHTML = '<strong>Gineco-obstétrica</strong>: kaykuna ruraykuna saludpi.';
+        document.getElementById('violence-key-title').textContent = 'Yachaykuna';
+        document.getElementById('violence-key1').textContent = 'Pachapi, 35 % warmikuna ruray o sexual kawsaykuna.';
+        document.getElementById('violence-key2').textContent = '30 % warmikuna pareja ruraykuna.';
+        document.getElementById('violence-key3').textContent = '38 % warmikuna wañuy pareja ruraykuna.';
+        document.getElementById('violence-key4').textContent = '24 % warmikuna 15‑19 wata pareja ruraykuna.';
+        document.getElementById('violence-risk-title').textContent = 'Riksiykuna';
+        document.getElementById('violence-risk-text').textContent = 'Kaykuna: yachay mana alli, warmikuna chinkaykuna, cultura mana alli.';
+        document.getElementById('violence-health-title').textContent = 'Saludpi kaykuna';
+        document.getElementById('violence-health-text').textContent = 'Kawsay warmikuna mana alli, saludpi chinkaykuna, shimi, ruray, sexual, reproduccion.';
+        document.getElementById('violence-legal-title').textContent = 'Leykuna yachaykuna';
+        document.getElementById('violence-legal-text').textContent = 'Ecuadorpi, kawsay warmikuna discriminaciónmi, ODS 5, Belém do Pará, CEDAW.';
+        document.getElementById('violence-prevent-title').textContent = 'Prevenshunkuna';
+        document.getElementById('violence-prevent-text1').textContent = 'OMS/OPSmi salud, justicia, yachay, yachachina ruraykuna.';
+        document.getElementById('violence-prevent-text2').textContent = 'Campañakuna #NoHayExcusa, Spotlightmi kaykuna ruraykuna.';
+        document.getElementById('violence-action-title').textContent = 'Ruraykuna';
+        document.getElementById('violence-action1').innerHTML = '✅ <strong>Yachay:</strong> Kawsaykuna riksiy.';
+        document.getElementById('violence-action2').innerHTML = '✅ <strong>Rikuy:</strong> Ministerio, ayuda, instituto riksiy.';
+        document.getElementById('violence-action3').innerHTML = '✅ <strong>Yanapay:</strong> Warmikuna yanapay, prevencion ruray.';
+        document.getElementById('violence-action4').innerHTML = '✅ <strong>Munay:</strong> Politica alli, igualdad ruray.';
+        document.getElementById('violence-action-btn').textContent = 'Yachaykuna riksiy';
+        document.getElementById('violence-resource-title').textContent = 'Yachaykuna y enlaces';
+        document.getElementById('footer-copy').textContent = '© 2025 Ñusta Kawsay. Sumaq warmikuna.';
+        document.getElementById('footer-privacy').textContent = 'Rikcharina Kamachiy';
+        document.getElementById('footer-about').textContent = 'Kaypimi Ñusta Kawsay';
+        document.getElementById('footer-social').textContent = 'Yachaykunata riksichin';
+        document.getElementById('nav-inicio').textContent = 'Ñawpa';
+        document.getElementById('nav-caracteristicas').textContent = 'Kawsaykuna';
+        document.getElementById('nav-testimonios').textContent = 'Rimaykuna';
+        document.getElementById('nav-descarga').textContent = 'Rikch’a';
+        document.getElementById('nav-violencia').textContent = 'Kawsay';
+      } else {
+        document.title = 'Violencia de Género – Información y Acción';
+        document.getElementById('violence-title').textContent = 'Una de cada tres mujeres sufre violencia física o sexual a lo largo de su vida';
+        document.getElementById('violence-stat1').textContent = 'A nivel mundial, 1 de cada 3 mujeres ha sufrido violencia física y/o sexual.';
+        document.getElementById('violence-stat2').textContent = 'En Ecuador, 60,6 % de mujeres han vivido algún tipo de violencia de género (psicológica, física, sexual o patrimonial).';
+        document.getElementById('violence-types-title').textContent = 'Tipos de violencia';
+        document.getElementById('violence-type1').innerHTML = '<strong>Psicológica</strong>: el 53,9 % de mujeres en Ecuador ha experimentado este tipo.';
+        document.getElementById('violence-type2').innerHTML = '<strong>Física</strong>: afecta al 38,0 % de mujeres en Ecuador.';
+        document.getElementById('violence-type3').innerHTML = '<strong>Sexual</strong>: 1 de cada 4 mujeres en Ecuador ha sido víctima.';
+        document.getElementById('violence-type4').innerHTML = '<strong>Patrimonial</strong>: 16,7 % de mujeres en Ecuador han sufrido control financiero.';
+        document.getElementById('violence-type5').innerHTML = '<strong>Gineco-obstétrica</strong>: incluye violencia durante atención médica.';
+        document.getElementById('violence-key-title').textContent = 'Cifras clave';
+        document.getElementById('violence-key1').textContent = 'Globalmente, el 35 % de las mujeres han sufrido violencia física o sexual.';
+        document.getElementById('violence-key2').textContent = 'El 30 % de las mujeres en relaciones han sufrido violencia de pareja.';
+        document.getElementById('violence-key3').textContent = 'El 38 % de los homicidios de mujeres son cometidos por la pareja.';
+        document.getElementById('violence-key4').textContent = 'El 24 % de las adolescentes de 15‑19 años han sufrido violencia por parte de su pareja.';
+        document.getElementById('violence-risk-title').textContent = 'Factores de riesgo y causas';
+        document.getElementById('violence-risk-text').textContent = 'Algunos de los factores asociados son: bajo nivel educativo, experiencias de violencia en la infancia y normas culturales que normalizan la desigualdad.';
+        document.getElementById('violence-health-title').textContent = 'Impacto en la salud';
+        document.getElementById('violence-health-text').textContent = 'La violencia de género es una grave violación de derechos humanos y un problema de salud pública. Afecta la salud física, mental, sexual y reproductiva de las mujeres.';
+        document.getElementById('violence-legal-title').textContent = 'Marco legal y compromiso institucional';
+        document.getElementById('violence-legal-text').textContent = 'En Ecuador, la violencia de género se reconoce como discriminación y está en línea con la ODS 5, la Convención de Belém do Pará y CEDAW.';
+        document.getElementById('violence-prevent-title').textContent = 'Prevención y respuesta';
+        document.getElementById('violence-prevent-text1').textContent = 'Organismos como la OMS/OPS recomiendan una respuesta multisectorial: salud, justicia, educación y formación para detección temprana.';
+        document.getElementById('violence-prevent-text2').textContent = 'Campañas globales como #NoHayExcusa y la Iniciativa Spotlight promueven la erradicación de esta violencia.';
+        document.getElementById('violence-action-title').textContent = 'Llamados a la acción';
+        document.getElementById('violence-action1').innerHTML = '✅ <strong>Educa:</strong> Aprende a identificar los tipos de violencia.';
+        document.getElementById('violence-action2').innerHTML = '✅ <strong>Denuncia:</strong> Contacta ministerios, líneas de ayuda e institutos especializados.';
+        document.getElementById('violence-action3').innerHTML = '✅ <strong>Apoya:</strong> Acompaña a las víctimas y promueve la prevención.';
+        document.getElementById('violence-action4').innerHTML = '✅ <strong>Exige:</strong> Políticas públicas efectivas y fondos para igualdad.';
+        document.getElementById('violence-action-btn').textContent = 'Conoce los recursos disponibles';
+        document.getElementById('violence-resource-title').textContent = 'Recursos y enlaces útiles';
+        document.getElementById('footer-copy').textContent = '© 2025 Ñusta Kawsay. Todos los derechos reservados.';
+        document.getElementById('footer-privacy').textContent = 'Política de privacidad';
+        document.getElementById('footer-about').textContent = 'Acerca de';
+        document.getElementById('footer-social').textContent = 'Síguenos en redes sociales';
+        document.getElementById('nav-inicio').textContent = 'Inicio';
+        document.getElementById('nav-caracteristicas').textContent = 'Características';
+        document.getElementById('nav-testimonios').textContent = 'Testimonios';
+        document.getElementById('nav-descarga').textContent = 'Descarga';
+        document.getElementById('nav-violencia').textContent = 'Violencia';
+      }
+    }
+  </script>
+</body>
+</html>
