@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de | Ñusta Kawsay</title>
+    <title id="about-title-head">Acerca de | Ñusta Kawsay</title>
     <link rel="stylesheet" href="../css/styles.css">
-    
     <link href="https://fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -60,46 +59,86 @@
             margin-bottom: 10px;
             font-size: 1.08rem;
         }
-        /* Cambia solo el logo del header */
-.logo {
-    font-family: 'Montserrat', Arial, sans-serif !important;
-    font-size: 5rem;
-    color: #fff;
-    letter-spacing: 2px;
-    text-decoration: none;
-    font-weight: 700;
-    margin-right: 40px;
-}
-
-/* Mantén el menú a la derecha */
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 32px;
-    height: 100px;
-}
-
-/* Ajusta el tamaño del menú para que combine */
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 28px;
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.2s;
-    font-family: 'Quicksand', Arial, sans-serif;
-    font-weight: 600;
-}
-
+        .logo {
+            font-family: 'Montserrat', Arial, sans-serif !important;
+            font-size: 5rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-right: 40px;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 100px;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+        .main-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+            font-family: 'Quicksand', Arial, sans-serif;
+            font-weight: 600;
+        }
+        #language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 24px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 54px;
+            height: 28px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 28px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #aa7cc5;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        #language-label {
+            font-size: 1rem;
+            color: #222;
+            font-weight: bold;
+        }
         @media (max-width: 700px) {
             .acerca-container {
                 padding: 18px 4vw;
@@ -122,64 +161,111 @@
         <div class="nav-container">
             <a href="#" class="logo">Ñusta Kawsay</a>
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html">Características</a></li>
-                <li><a href="../index.html">Testimonios</a></li>
-                <li><a href="#descarga">Descarga</a></li>
+                <li><a href="../index.html" id="nav-inicio">Inicio</a></li>
+                <li><a href="../index.html#caracteristicas" id="nav-caracteristicas">Características</a></li>
+                <li><a href="../index.html#testimonios" id="nav-testimonios">Testimonios</a></li>
+                <li><a href="../index.html#descarga" id="nav-descarga">Descarga</a></li>
             </ul>
+            <div id="language-switcher">
+                <label for="language-toggle" class="switch">
+                    <input type="checkbox" id="language-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span id="language-label">Español</span>
+            </div>
         </div>
     </nav>
     <div class="acerca-container">
         <img src="../images/logtipoPuce.png" alt="Logotipo de la PUCE" class="logo-puce">
-        <h1>Acerca de Ñusta Kawsay</h1>
-        <p>
+        <h1 id="about-title">Acerca de Ñusta Kawsay</h1>
+        <p id="about-desc">
             <strong>Ñusta Kawsay</strong> es una aplicación desarrollada como botón de pánico para ayudar a mujeres en situaciones de violencia de género. Permite a las usuarias pedir ayuda de manera rápida y discreta: al presionar el botón, se envía un mensaje a Telegram con la ubicación y los contactos a llamar. La app puede usarse con o sin iniciar sesión, adaptándose a las necesidades de cada mujer.
         </p>
-        <h2>Sobre el Proyecto</h2>
-        <p>
+        <h2 id="about-project-title">Sobre el Proyecto</h2>
+        <p id="about-project-desc">
             Este proyecto fue concebido y desarrollado por estudiantes de la carrera de Ingeniería en Sistemas de Información de la Pontificia Universidad Católica del Ecuador (PUCE), en el marco de la asignatura "Emprendimiento Tecnológico con Emprendimientos Sociales", bajo la guía del Profesor Francisco Rodríguez Clavijo. Se realizó bajo la modalidad de Aprendizaje Servicio, aplicando conocimientos tecnológicos para generar un impacto social positivo y directo.
         </p>
-        <p>
+        <p id="about-thanks">
             Agradecemos el invaluable apoyo y auspicio de la Coordinación Nacional de Innovación Educativa y Desarrollo Docente, y la Coordinación Nacional de Aprendizaje Servicio de la PUCE, sin cuyo respaldo este proyecto no habría sido posible.
         </p>
-        <h2>Equipo de Desarrollo</h2>
+        <h2 id="about-team-title">Equipo de Desarrollo</h2>
         <ul>
-            <li><strong>Danahé Andrade</strong> – Jefe de Grupo, Desarrolladora FrontEnd</li>
-            <li><strong>Abigail Arteaga</strong> – Desarrolladora Full Stack</li>
-            <li><strong>Paula Oramas</strong> – Desarrolladora Full Stack</li>
+            <li id="about-team1"><strong>Danahé Andrade</strong> – Jefe de Grupo, Desarrolladora FrontEnd</li>
+            <li id="about-team2"><strong>Abigail Arteaga</strong> – Desarrolladora Full Stack</li>
+            <li id="about-team3"><strong>Paula Oramas</strong> – Desarrolladora Full Stack</li>
         </ul>
-        
     </div>
- <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container fade-in-on-scroll">
-            <p>&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
-            <a href="./politicaPrivacidad.html">Política de privacidad</a>
-            <a href="./acercaDe.html">Acerca de</a>
-            <a href="#">Síguenos en redes sociales</a>
+            <p id="footer-copy">&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
+            <a id="footer-privacy" href="./politicaPrivacidad.html">Política de privacidad</a>
+            <a id="footer-about" href="./acercaDe.html">Acerca de</a>
+            <a id="footer-social" href="#">Síguenos en redes sociales</a>
         </div>
     </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
 
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Slider de idioma
+        document.getElementById('language-toggle').addEventListener('change', function() {
+            if (this.checked) {
+                // Kichwa Cotopaxi
+                document.getElementById('language-label').textContent = 'Kichwa';
+                document.title = 'Ñusta Kawsay – Kaypimi';
+                document.getElementById('about-title').textContent = 'Kaypimi Ñusta Kawsay';
+                document.getElementById('about-desc').innerHTML = '<strong>Ñusta Kawsay</strong> aplikasyunkuna warmikuna yanapana ruraykuna, chaykunapi chinkaykuna. Botón de pánico rurashka, Telegrampi ubicacionta, rimaykuna apamun. Appmi warmikuna munashkapi sin o con cuenta rurashka.';
+                document.getElementById('about-project-title').textContent = 'Proyecto Rayku';
+                document.getElementById('about-project-desc').textContent = 'Kay proyecto rurashka Pontificia Universidad Católica del Ecuador (PUCE) yachay wasipi, Ingeniería en Sistemas de Información kawsaykuna, Francisco Rodríguez Clavijo yachachiqninpi. Aprendizaje Servicio rurashka, tecnología yachaykuna, sumaq llikch’a ruraykuna.';
+                document.getElementById('about-thanks').textContent = 'Yupaychani Coordinación Nacional de Innovación Educativa y Desarrollo Docente, Coordinación Nacional de Aprendizaje Servicio PUCE, chaykunaman yanapashka, kay proyecto rurashka.';
+                document.getElementById('about-team-title').textContent = 'Ruraykuna Mashi';
+                document.getElementById('about-team1').innerHTML = '<strong>Danahé Andrade</strong> – Jefe de Grupo, FrontEnd ruraykuna';
+                document.getElementById('about-team2').innerHTML = '<strong>Abigail Arteaga</strong> – Full Stack ruraykuna';
+                document.getElementById('about-team3').innerHTML = '<strong>Paula Oramas</strong> – Full Stack ruraykuna';
+                document.getElementById('footer-copy').textContent = '© 2025 Ñusta Kawsay. Sumaq warmikuna.';
+                document.getElementById('footer-privacy').textContent = 'Rikcharina Kamachiy';
+                document.getElementById('footer-about').textContent = 'Kaypimi Ñusta Kawsay';
+                document.getElementById('footer-social').textContent = 'Yachaykunata riksichin';
+                document.getElementById('nav-inicio').textContent = 'Ñawpa';
+                document.getElementById('nav-caracteristicas').textContent = 'Kawsaykuna';
+                document.getElementById('nav-testimonios').textContent = 'Rimaykuna';
+                document.getElementById('nav-descarga').textContent = 'Rikch’a';
+            } else {
+                // Español
+                document.getElementById('language-label').textContent = 'Español';
+                document.title = 'Acerca de | Ñusta Kawsay';
+                document.getElementById('about-title').textContent = 'Acerca de Ñusta Kawsay';
+                document.getElementById('about-desc').innerHTML = '<strong>Ñusta Kawsay</strong> es una aplicación desarrollada como botón de pánico para ayudar a mujeres en situaciones de violencia de género. Permite a las usuarias pedir ayuda de manera rápida y discreta: al presionar el botón, se envía un mensaje a Telegram con la ubicación y los contactos a llamar. La app puede usarse con o sin iniciar sesión, adaptándose a las necesidades de cada mujer.';
+                document.getElementById('about-project-title').textContent = 'Sobre el Proyecto';
+                document.getElementById('about-project-desc').textContent = 'Este proyecto fue concebido y desarrollado por estudiantes de la carrera de Ingeniería en Sistemas de Información de la Pontificia Universidad Católica del Ecuador (PUCE), en el marco de la asignatura "Emprendimiento Tecnológico con Emprendimientos Sociales", bajo la guía del Profesor Francisco Rodríguez Clavijo. Se realizó bajo la modalidad de Aprendizaje Servicio, aplicando conocimientos tecnológicos para generar un impacto social positivo y directo.';
+                document.getElementById('about-thanks').textContent = 'Agradecemos el invaluable apoyo y auspicio de la Coordinación Nacional de Innovación Educativa y Desarrollo Docente, y la Coordinación Nacional de Aprendizaje Servicio de la PUCE, sin cuyo respaldo este proyecto no habría sido posible.';
+                document.getElementById('about-team-title').textContent = 'Equipo de Desarrollo';
+                document.getElementById('about-team1').innerHTML = '<strong>Danahé Andrade</strong> – Jefe de Grupo, Desarrolladora FrontEnd';
+                document.getElementById('about-team2').innerHTML = '<strong>Abigail Arteaga</strong> – Desarrolladora Full Stack';
+                document.getElementById('about-team3').innerHTML = '<strong>Paula Oramas</strong> – Desarrolladora Full Stack';
+                document.getElementById('footer-copy').textContent = '© 2025 Ñusta Kawsay. Todos los derechos reservados.';
+                document.getElementById('footer-privacy').textContent = 'Política de privacidad';
+                document.getElementById('footer-about').textContent = 'Acerca de';
+                document.getElementById('footer-social').textContent = 'Síguenos en redes sociales';
+                document.getElementById('nav-inicio').textContent = 'Inicio';
+                document.getElementById('nav-caracteristicas').textContent = 'Características';
+                document.getElementById('nav-testimonios').textContent = 'Testimonios';
+                document.getElementById('nav-descarga').textContent = 'Descarga';
             }
         });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
-        observer.observe(el);
     });
-});
-</script>
-
-    
+    </script>
 </body>
-
-
-
 </html>

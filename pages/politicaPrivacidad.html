@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad | Ñusta Kawsay</title>
+    <title id="privacy-title-head">Política de Privacidad | Ñusta Kawsay</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -49,6 +49,54 @@
             color: #8255a1;
             text-decoration: underline;
         }
+        /* Slider idioma */
+        #language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 24px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 54px;
+            height: 28px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 28px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #aa7cc5;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        #language-label {
+            font-size: 1rem;
+            color: #222;
+            font-weight: bold;
+        }
         @media (max-width: 600px) {
             .contenedor-politica {
                 padding: 18px 6vw;
@@ -67,103 +115,197 @@
         <div class="nav-container">
             <a href="../index.html" class="logo">Ñusta Kawsay</a>
             <ul>
-                <li><a href="../index.html#inicio">Inicio</a></li>
-                <li><a href="../index.html#caracteristicas">Características</a></li>
-                <li><a href="../index.html#testimonios">Testimonios</a></li>
-                <li><a href="../index.html#descarga">Descarga</a></li>
-                <li><a href="politicaPrivacidad.html">Privacidad</a></li>
+                <li><a href="../index.html#inicio" id="nav-inicio">Inicio</a></li>
+                <li><a href="../index.html#caracteristicas" id="nav-caracteristicas">Características</a></li>
+                <li><a href="../index.html#testimonios" id="nav-testimonios">Testimonios</a></li>
+                <li><a href="../index.html#descarga" id="nav-descarga">Descarga</a></li>
+                <li><a href="politicaPrivacidad.html" id="nav-privacidad">Privacidad</a></li>
             </ul>
+            <div id="language-switcher">
+                <label for="language-toggle" class="switch">
+                    <input type="checkbox" id="language-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span id="language-label">Español</span>
+            </div>
         </div>
     </nav>
     <div class="contenedor-politica">
-        <h1>Política de Privacidad – Ñusta Kawsay</h1>
-        <p><strong>Última actualización:</strong> julio 2025</p>
-
-        <p>
+        <h1 id="privacy-title">Política de Privacidad – Ñusta Kawsay</h1>
+        <p id="privacy-update"><strong>Última actualización:</strong> julio 2025</p>
+        <p id="privacy-intro">
             Ñusta Kawsay es una aplicación comprometida con la seguridad y privacidad de las mujeres en zonas rurales del Ecuador, en especial de comunidades como Chugchilán. Esta política explica cómo recopilamos, utilizamos, almacenamos y protegemos la información personal de nuestras usuarias.
         </p>
-
-        <h2>1. ¿Qué información recopilamos?</h2>
-        <p>Cuando una usuaria se registra en la app, se recopila la siguiente información:</p>
+        <h2 id="section1-title">1. ¿Qué información recopilamos?</h2>
+        <p id="section1-text">Cuando una usuaria se registra en la app, se recopila la siguiente información:</p>
         <ul>
-            <li><strong>Datos personales:</strong> Nombre completo, número de cédula, dirección domiciliaria, número de teléfono, fecha de nacimiento.</li>
-            <li><strong>Datos técnicos:</strong> Idioma preferido, tipo de dispositivo, versión del sistema operativo.</li>
-            <li><strong>Ubicación en tiempo real (GPS):</strong> Solo al activar el botón de ayuda.</li>
+            <li id="section1-li1"><strong>Datos personales:</strong> Nombre completo, número de cédula, dirección domiciliaria, número de teléfono, fecha de nacimiento.</li>
+            <li id="section1-li2"><strong>Datos técnicos:</strong> Idioma preferido, tipo de dispositivo, versión del sistema operativo.</li>
+            <li id="section1-li3"><strong>Ubicación en tiempo real (GPS):</strong> Solo al activar el botón de ayuda.</li>
         </ul>
-
-        <h2>2. ¿Para qué usamos esta información?</h2>
+        <h2 id="section2-title">2. ¿Para qué usamos esta información?</h2>
         <ul>
-            <li>Brindar asistencia inmediata en situaciones de emergencia.</li>
-            <li>Enviar alertas con ubicación en tiempo real al grupo de apoyo o contacto definido (Telegram).</li>
-            <li>Mejorar la seguridad del sistema y prevenir usos indebidos.</li>
-            <li>Gestionar registros comunitarios de las usuarias para planes de respuesta local.</li>
+            <li id="section2-li1">Brindar asistencia inmediata en situaciones de emergencia.</li>
+            <li id="section2-li2">Enviar alertas con ubicación en tiempo real al grupo de apoyo o contacto definido (Telegram).</li>
+            <li id="section2-li3">Mejorar la seguridad del sistema y prevenir usos indebidos.</li>
+            <li id="section2-li4">Gestionar registros comunitarios de las usuarias para planes de respuesta local.</li>
         </ul>
-
-        <h2>3. ¿Cómo se comparte la información?</h2>
+        <h2 id="section3-title">3. ¿Cómo se comparte la información?</h2>
         <ul>
-            <li><strong>Ubicación:</strong> Solo se comparte con los contactos o grupo de ayuda predefinido.</li>
-            <li><strong>Datos personales:</strong> No se comparten con terceros ni con fines comerciales o publicitarios.</li>
-            <li>La información puede ser revisada por autoridades comunitarias o instituciones aliadas solo con autorización de la usuaria o en casos de emergencia extrema.</li>
+            <li id="section3-li1"><strong>Ubicación:</strong> Solo se comparte con los contactos o grupo de ayuda predefinido.</li>
+            <li id="section3-li2"><strong>Datos personales:</strong> No se comparten con terceros ni con fines comerciales o publicitarios.</li>
+            <li id="section3-li3">La información puede ser revisada por autoridades comunitarias o instituciones aliadas solo con autorización de la usuaria o en casos de emergencia extrema.</li>
         </ul>
-
-        <h2>4. Seguridad de la información</h2>
+        <h2 id="section4-title">4. Seguridad de la información</h2>
         <ul>
-            <li>Los datos están protegidos mediante cifrado y almacenados de forma segura en servidores autorizados por el equipo Ñusta Kawsay.</li>
-            <li>No se venden ni comparten datos personales con terceros.</li>
-            <li>La usuaria puede solicitar la eliminación completa de sus datos personales en cualquier momento.</li>
+            <li id="section4-li1">Los datos están protegidos mediante cifrado y almacenados de forma segura en servidores autorizados por el equipo Ñusta Kawsay.</li>
+            <li id="section4-li2">No se venden ni comparten datos personales con terceros.</li>
+            <li id="section4-li3">La usuaria puede solicitar la eliminación completa de sus datos personales en cualquier momento.</li>
         </ul>
-
-        <h2>5. Permisos de la app</h2>
+        <h2 id="section5-title">5. Permisos de la app</h2>
         <ul>
-            <li><strong>Ubicación:</strong> Para compartirla en emergencias.</li>
-            <li><strong>Internet:</strong> Para enviar la alerta.</li>
-            <li><strong>Notificaciones:</strong> Para recibir confirmaciones o alertas relevantes.</li>
+            <li id="section5-li1"><strong>Ubicación:</strong> Para compartirla en emergencias.</li>
+            <li id="section5-li2"><strong>Internet:</strong> Para enviar la alerta.</li>
+            <li id="section5-li3"><strong>Notificaciones:</strong> Para recibir confirmaciones o alertas relevantes.</li>
         </ul>
-
-        <h2>6. Derechos de la usuaria</h2>
+        <h2 id="section6-title">6. Derechos de la usuaria</h2>
         <ul>
-            <li>Acceder, actualizar o eliminar sus datos personales.</li>
-            <li>Rechazar el uso de ubicación (aunque esto limita el funcionamiento del botón de ayuda).</li>
-            <li>Desinstalar la app y eliminar su cuenta.</li>
+            <li id="section6-li1">Acceder, actualizar o eliminar sus datos personales.</li>
+            <li id="section6-li2">Rechazar el uso de ubicación (aunque esto limita el funcionamiento del botón de ayuda).</li>
+            <li id="section6-li3">Desinstalar la app y eliminar su cuenta.</li>
         </ul>
-
-        <h2>7. Cambios en esta política</h2>
-        <p>Cualquier cambio será notificado dentro de la app. Se recomienda revisarla periódicamente.</p>
-
-        <h2>8. Contacto</h2>
-        <p>
+        <h2 id="section7-title">7. Cambios en esta política</h2>
+        <p id="section7-text">Cualquier cambio será notificado dentro de la app. Se recomienda revisarla periódicamente.</p>
+        <h2 id="section8-title">8. Contacto</h2>
+        <p id="section8-text">
             Si tienes dudas o deseas ejercer tus derechos sobre tus datos:<br>
             <strong>Responsable del Proyecto:</strong> Danahé Andrade<br>
             <strong>Email de contacto:</strong> <a href="mailto:nustakawsay@gmail.com">nustakawsay@gmail.com</a><br>
             <strong>Teléfono de soporte:</strong> 0967111360
         </p>
     </div>
-
     <!-- Footer -->
     <footer>
         <div class="container fade-in-on-scroll">
-            <p>&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
-            <a href="./politicaPrivacidad.html">Política de privacidad</a>
-            <a href="./acercaDe.html">Acerca de</a>
-            <a href="#">Síguenos en redes sociales</a>
+            <p id="footer-copy">&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
+            <a id="footer-privacy" href="./politicaPrivacidad.html">Política de privacidad</a>
+            <a id="footer-about" href="./acercaDe.html">Acerca de</a>
+            <a id="footer-social" href="#">Síguenos en redes sociales</a>
         </div>
     </footer>
+    <script>
+    // Animación fade-in
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
 
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Slider de idioma
+        document.getElementById('language-toggle').addEventListener('change', function() {
+            if (this.checked) {
+                // Kichwa Cotopaxi
+                document.getElementById('language-label').textContent = 'Kichwa';
+                document.title = 'Ñusta Kawsay – Rikcharina Kamachiy';
+                document.getElementById('privacy-title').textContent = 'Ñusta Kawsay – Rikcharina Kamachiy';
+                document.getElementById('privacy-update').innerHTML = '<strong>Rikuchishka punchay:</strong> julio 2025';
+                document.getElementById('privacy-intro').textContent = 'Ñusta Kawsay aplikasyunkuna warmikuna kawsayta, shimikuna, ruraykuna Cotopaxi llaqtapi, Chugchilán llaqtapi riksichin. Kay kamachiyta yachachin, ima rikuchishka, ima rurashka, ima pakarishka, ima alli kawsayta warmikuna shimikunata.';
+                document.getElementById('section1-title').textContent = '1. Ima shimikunata rikuchin?';
+                document.getElementById('section1-text').textContent = 'Warmikuna aplikasyunta rikuchishka, kaykunata apamun:';
+                document.getElementById('section1-li1').innerHTML = '<strong>Shimikuna:</strong> Sutin yachay, cédula yachay, wasipi direccion, celular yachay, paqarin punchay.';
+                document.getElementById('section1-li2').innerHTML = '<strong>Tecnico yachay:</strong> Rimay shimi, dispositivota, sistema operativo versiòn.';
+                document.getElementById('section1-li3').innerHTML = '<strong>Kaypi kawsay (GPS):</strong> Yanapana botónta rurashka chaykama.';
+                document.getElementById('section2-title').textContent = '2. Ima raykupi kay shimikunata apamun?';
+                document.getElementById('section2-li1').textContent = 'Yanapana ruraykuna chaykunapi chinkaykuna.';
+                document.getElementById('section2-li2').textContent = 'Kaypi kawsayta apamun, Telegrampi yanapana warmikunaman.';
+                document.getElementById('section2-li3').textContent = 'Sistema alli kawsayta rurana, mana alli ruraykuna pakarina.';
+                document.getElementById('section2-li4').textContent = 'Comunidadpi warmikuna yachaykuna, yanapana ruraykuna.';
+                document.getElementById('section3-title').textContent = '3. Ima shimikunata riksichin?';
+                document.getElementById('section3-li1').innerHTML = '<strong>Kaypi kawsay:</strong> Sumaq warmikunaman riksichin.';
+                document.getElementById('section3-li2').innerHTML = '<strong>Shimikuna:</strong> Mana riksichin mana comercio ruraykuna.';
+                document.getElementById('section3-li3').textContent = 'Autoridadkunaman riksichin, warmikuna kamachishka kashkapi.';
+                document.getElementById('section4-title').textContent = '4. Shimikuna alli kawsaypi';
+                document.getElementById('section4-li1').textContent = 'Shimikuna cifradopi pakarishka, Ñusta Kawsay ekipoman riksichin.';
+                document.getElementById('section4-li2').textContent = 'Mana shimikuna riksichin mana comercio ruraykuna.';
+                document.getElementById('section4-li3').textContent = 'Warmikuna shimikunata pakarina munashkapi.';
+                document.getElementById('section5-title').textContent = '5. App permiso';
+                document.getElementById('section5-li1').innerHTML = '<strong>Kaypi kawsay:</strong> Yanapana ruraykuna.';
+                document.getElementById('section5-li2').innerHTML = '<strong>Internet:</strong> Yanapana ruraykuna.';
+                document.getElementById('section5-li3').innerHTML = '<strong>Notificaciones:</strong> Yanapana ruraykuna.';
+                document.getElementById('section6-title').textContent = '6. Warmikuna yachaykuna';
+                document.getElementById('section6-li1').textContent = 'Shimikunata rikuy, pakarina, chaykunata pakarina.';
+                document.getElementById('section6-li2').textContent = 'Kaypi kawsayta mana rurashka (botón mana rurashka).';
+                document.getElementById('section6-li3').textContent = 'Appta chinkachina, shimikunata pakarina.';
+                document.getElementById('section7-title').textContent = '7. Kay kamachiypi tukuy';
+                document.getElementById('section7-text').textContent = 'Kay kamachiypi tukuy apppi riksichin. Punchaykuna yachachin.';
+                document.getElementById('section8-title').textContent = '8. Rimanakuy';
+                document.getElementById('section8-text').innerHTML = 'Kaypi tapukuna, shimikunata pakarina munashkapi:<br><strong>Kamachikuq:</strong> Danahé Andrade<br><strong>Email:</strong> <a href="mailto:nustakawsay@gmail.com">nustakawsay@gmail.com</a><br><strong>Celular:</strong> 0967111360';
+                document.getElementById('footer-copy').textContent = '© 2025 Ñusta Kawsay. Sumaq warmikuna.';
+                document.getElementById('footer-privacy').textContent = 'Rikcharina Kamachiy';
+                document.getElementById('footer-about').textContent = 'Ñusta Kawsay Kamachiy';
+                document.getElementById('footer-social').textContent = 'Yachaykunata riksichin';
+                document.getElementById('nav-inicio').textContent = 'Ñawpa';
+                document.getElementById('nav-caracteristicas').textContent = 'Kawsaykuna';
+                document.getElementById('nav-testimonios').textContent = 'Rimaykuna';
+                document.getElementById('nav-descarga').textContent = 'Rikch’a';
+                document.getElementById('nav-privacidad').textContent = 'Kamachiy';
+            } else {
+                // Español
+                document.getElementById('language-label').textContent = 'Español';
+                document.title = 'Política de Privacidad | Ñusta Kawsay';
+                document.getElementById('privacy-title').textContent = 'Política de Privacidad – Ñusta Kawsay';
+                document.getElementById('privacy-update').innerHTML = '<strong>Última actualización:</strong> julio 2025';
+                document.getElementById('privacy-intro').textContent = 'Ñusta Kawsay es una aplicación comprometida con la seguridad y privacidad de las mujeres en zonas rurales del Ecuador, en especial de comunidades como Chugchilán. Esta política explica cómo recopilamos, utilizamos, almacenamos y protegemos la información personal de nuestras usuarias.';
+                document.getElementById('section1-title').textContent = '1. ¿Qué información recopilamos?';
+                document.getElementById('section1-text').textContent = 'Cuando una usuaria se registra en la app, se recopila la siguiente información:';
+                document.getElementById('section1-li1').innerHTML = '<strong>Datos personales:</strong> Nombre completo, número de cédula, dirección domiciliaria, número de teléfono, fecha de nacimiento.';
+                document.getElementById('section1-li2').innerHTML = '<strong>Datos técnicos:</strong> Idioma preferido, tipo de dispositivo, versión del sistema operativo.';
+                document.getElementById('section1-li3').innerHTML = '<strong>Ubicación en tiempo real (GPS):</strong> Solo al activar el botón de ayuda.';
+                document.getElementById('section2-title').textContent = '2. ¿Para qué usamos esta información?';
+                document.getElementById('section2-li1').textContent = 'Brindar asistencia inmediata en situaciones de emergencia.';
+                document.getElementById('section2-li2').textContent = 'Enviar alertas con ubicación en tiempo real al grupo de apoyo o contacto definido (Telegram).';
+                document.getElementById('section2-li3').textContent = 'Mejorar la seguridad del sistema y prevenir usos indebidos.';
+                document.getElementById('section2-li4').textContent = 'Gestionar registros comunitarios de las usuarias para planes de respuesta local.';
+                document.getElementById('section3-title').textContent = '3. ¿Cómo se comparte la información?';
+                document.getElementById('section3-li1').innerHTML = '<strong>Ubicación:</strong> Solo se comparte con los contactos o grupo de ayuda predefinido.';
+                document.getElementById('section3-li2').innerHTML = '<strong>Datos personales:</strong> No se comparten con terceros ni con fines comerciales o publicitarios.';
+                document.getElementById('section3-li3').textContent = 'La información puede ser revisada por autoridades comunitarias o instituciones aliadas solo con autorización de la usuaria o en casos de emergencia extrema.';
+                document.getElementById('section4-title').textContent = '4. Seguridad de la información';
+                document.getElementById('section4-li1').textContent = 'Los datos están protegidos mediante cifrado y almacenados de forma segura en servidores autorizados por el equipo Ñusta Kawsay.';
+                document.getElementById('section4-li2').textContent = 'No se venden ni comparten datos personales con terceros.';
+                document.getElementById('section4-li3').textContent = 'La usuaria puede solicitar la eliminación completa de sus datos personales en cualquier momento.';
+                document.getElementById('section5-title').textContent = '5. Permisos de la app';
+                document.getElementById('section5-li1').innerHTML = '<strong>Ubicación:</strong> Para compartirla en emergencias.';
+                document.getElementById('section5-li2').innerHTML = '<strong>Internet:</strong> Para enviar la alerta.';
+                document.getElementById('section5-li3').innerHTML = '<strong>Notificaciones:</strong> Para recibir confirmaciones o alertas relevantes.';
+                document.getElementById('section6-title').textContent = '6. Derechos de la usuaria';
+                document.getElementById('section6-li1').textContent = 'Acceder, actualizar o eliminar sus datos personales.';
+                document.getElementById('section6-li2').textContent = 'Rechazar el uso de ubicación (aunque esto limita el funcionamiento del botón de ayuda).';
+                document.getElementById('section6-li3').textContent = 'Desinstalar la app y eliminar su cuenta.';
+                document.getElementById('section7-title').textContent = '7. Cambios en esta política';
+                document.getElementById('section7-text').textContent = 'Cualquier cambio será notificado dentro de la app. Se recomienda revisarla periódicamente.';
+                document.getElementById('section8-title').textContent = '8. Contacto';
+                document.getElementById('section8-text').innerHTML = 'Si tienes dudas o deseas ejercer tus derechos sobre tus datos:<br><strong>Responsable del Proyecto:</strong> Danahé Andrade<br><strong>Email de contacto:</strong> <a href="mailto:nustakawsay@gmail.com">nustakawsay@gmail.com</a><br><strong>Teléfono de soporte:</strong> 0967111360';
+                document.getElementById('footer-copy').textContent = '© 2025 Ñusta Kawsay. Todos los derechos reservados.';
+                document.getElementById('footer-privacy').textContent = 'Política de privacidad';
+                document.getElementById('footer-about').textContent = 'Acerca de';
+                document.getElementById('footer-social').textContent = 'Síguenos en redes sociales';
+                document.getElementById('nav-inicio').textContent = 'Inicio';
+                document.getElementById('nav-caracteristicas').textContent = 'Características';
+                document.getElementById('nav-testimonios').textContent = 'Testimonios';
+                document.getElementById('nav-descarga').textContent = 'Descarga';
+                document.getElementById('nav-privacidad').textContent = 'Privacidad';
             }
         });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
-        observer.observe(el);
     });
-});
-</script>
+    </script>
 </body>
 </html>

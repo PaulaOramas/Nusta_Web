@@ -10,15 +10,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Iceberg&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Revalia&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
         .logo {
-    font-family: 'Montserrat', Arial, sans-serif !important;
-    font-size: 5rem;
-    color: #fff;
-    letter-spacing: 2px;
-    text-decoration: none;
-    font-weight: 700;
-    margin-right: 40px;
-}
+            font-family: 'Montserrat', Arial, sans-serif !important;
+            font-size: 2.5rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-right: 40px;
+            white-space: nowrap;
+        }
+
+        /* Estilos para el Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Estilos del contenedor del idioma */
+        #language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 24px;
+        }
+
+        #language-label {
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -27,11 +110,18 @@
         <div class="nav-container">
             <a href="#" class="logo">Ñusta Kawsay</a>
             <ul>
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="../Nusta_Web/pages/">Características</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#descarga">Descarga</a></li>
+                <li><a id="nav-inicio" href="#inicio">Inicio</a></li>
+                <li><a id="nav-caracteristicas" href="#caracteristicas">Características</a></li>
+                <li><a id="nav-testimonios" href="#testimonios">Testimonios</a></li>
+                <li><a id="nav-descarga" href="#descarga">Descarga</a></li>
             </ul>
+            <div id="language-switcher">
+                <label for="language-toggle" class="switch">
+                    <input type="checkbox" id="language-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span id="language-label">Español</span>
+            </div>
         </div>
     </nav>
 
@@ -42,22 +132,22 @@
                 <img src="images/Nusta_Logo.jpg" alt="Imagen principal" />
             </div>
             <div class="hero-features">
-                <h2>Características de Ñusta Kawsay</h2>
+                <h2 id="features-title">Características de Ñusta Kawsay</h2>
                 <div class="features-grid">
                     <div class="feature">
                         <img src="images/panic-button.png" alt="Botón de Pánico">
-                        <p><strong>Botón de Pánico:</strong> Envía tu ubicación y alerta a tus contactos de confianza.</p>
+                        <p id="feature1"><strong>Botón de Pánico:</strong> Envía tu ubicación y alerta a tus contactos de confianza.</p>
                     </div>
                     <div class="feature">
                         <img src="images/personal-information.png" alt="Información Personal">
-                        <p><strong>Información Personal:</strong> Comparte datos importantes como tu tipo de sangre, peso y más.</p>
+                        <p id="feature2"><strong>Información Personal:</strong> Comparte datos importantes como tu tipo de sangre, peso y más.</p>
                     </div>
                     <div class="feature">
                         <img src="images/emergency-contact.png" alt="Contactos de Emergencia">
-                        <p><strong>Contactos de Emergencia:</strong> Involucra a tus familiares o autoridades con un solo toque.</p>
+                        <p id="feature3"><strong>Contactos de Emergencia:</strong> Involucra a tus familiares o autoridades con un solo toque.</p>
                     </div>
                 </div>
-                <h2>Descarga la app</h2>
+                <h2 id="download-title">Descarga la app</h2>
                 <div class="app-stores">
                     <a href="https://drive.google.com/file/d/1BeAL00oSi2t2piovn2axe9NlZsa_dFGT/view?usp=drive_link"><img src="images/Google-Play-Logo-4065366619.png" alt="Google Play"></a>
                 </div>
@@ -65,11 +155,11 @@
         </div>
     </header>
 
-        <!-- Propósito de la App -->
+    <!-- Propósito de la App -->
     <section class="proposito-app fade-in-on-scroll" id="proposito">
         <div class="container">
-            <h2>¿Por qué Ñusta Kawsay?</h2>
-            <p>
+            <h2 id="purpose-title">¿Cuál es el propósito de Ñusta Kawsay?</h2>
+            <p id="purpose-text">
                 Ñusta Kawsay nace como una opción segura para mujeres que se encuentran en situaciones de peligro o violencia de género. Nuestra app permite pedir ayuda de manera rápida, segura y discreta, conectando a las usuarias con sus contactos de confianza y servicios de emergencia, brindando protección y tranquilidad en los momentos más críticos.
             </p>
         </div>
@@ -78,14 +168,14 @@
     <!-- Testimonios -->
     <section class="testimonials fade-in-on-scroll">
         <div class="container">
-            <h2>Lo que dicen nuestras usuarias</h2>
+            <h2 id="testimonials-title">Lo que dicen nuestras usuarias</h2>
             <div class="testimonial">
-                <p>“Me siento más segura sabiendo que siempre puedo contar con Ñusta Kawsay.”</p>
-                <cite>- María, usuaria</cite>
+                <p id="testimonial1">“Ñusta Kawsay me dio tranquilidad en un momento difícil.”</p>
+                <cite id="testimonial1-author">- María, usuaria</cite>
             </div>
             <div class="testimonial">
-                <p>“Gracias a la app, pude pedir ayuda a tiempo en una situación crítica.”</p>
-                <cite>- Ana, usuaria</cite>
+                <p id="testimonial2">“La app es fácil de usar y me siento más segura.”</p>
+                <cite id="testimonial2-author">- Ana, usuaria</cite>
             </div>
         </div>
     </section>
@@ -93,64 +183,153 @@
     <!-- Botón de Descarga -->
     <section class="download fade-in-on-scroll">
         <div class="container">
-            <h2>Descárgala y siente la protección.</h2>
+            <h2 id="download-section-title">Descarga Ñusta Kawsay App</h2>
             <div class="cta-buttons">
-                <a href="https://drive.google.com/file/d/1BeAL00oSi2t2piovn2axe9NlZsa_dFGT/view?usp=drive_link" class="btn">Descargar para Android</a>
+                <a id="download-btn" href="https://drive.google.com/file/d/1BeAL00oSi2t2piovn2axe9NlZsa_dFGT/view?usp=drive_link" class="btn">Descargar Ñusta Kawsay para Android</a>
             </div>
         </div>
     </section>
 
     <!-- Compañeros Links -->
     <section class="enlaces-companeros fade-in-on-scroll" id="companeros">
-    <h2>Visita las páginas de mis compañeros</h2>
-    <div class="lista-companeros">
-        <a href="https://sirma.netlify.app/" target="_blank">SIRMA</a>
-        <a href="https://www.visitchugchilan.com/" target="_blank">Visit Chugchilan</a>
-        <a href="https://pagina3.com" target="_blank">Compañero 3</a>
-        <!-- Agrega más enlaces según necesites -->
-    </div>
-</section>
+        <h2 id="companeros-title">Visita las páginas de mis compañeros</h2>
+        <div class="lista-companeros">
+            <a id="companion1" href="https://sirma.netlify.app/" target="_blank">SIRMA</a>
+            <a id="companion2" href="https://www.visitchugchilan.com/" target="_blank">Visit Chugchilan</a>
+        </div>
+    </section>
 
     <!-- Redes Sociales -->
     <section class="redes-sociales fade-in-on-scroll" id="redes">
-        <h2>Síguenos en nuestras redes</h2>
+        <h2 id="redes-title">Síguenos en nuestras redes</h2>
         <div class="iconos-redes">
             <a href="https://www.instagram.com/nustakawsay/" target="_blank" aria-label="Instagram">
                 <img src="images/icons8-instagram-logo-64.png" alt="Instagram" />
             </a>
-            <a href="https://www.tiktok.com/@nusta.kawsay?_t=ZS-8xKpiZMrPBX&_r=1" target="_blank" aria-label="Twitter">
+            <a href="https://www.tiktok.com/@nusta.kawsay?_t=ZS-8xKpiZMrPBX&_r=1" target="_blank" aria-label="TikTok">
                 <img src="images/icons8-tiktok-64.png" alt="TikTok" />
             </a>
         </div>
     </section>
 
-    
-
     <!-- Footer -->
     <footer>
         <div class="container fade-in-on-scroll">
-            <p>&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
-            <a href="./pages/politicaPrivacidad.html">Política de privacidad</a>
-            <a href="./pages/acercaDe.html">Acerca de</a>
-            <a href="#">Síguenos en redes sociales</a>
+            <p id="footer-copy">&copy; 2025 Ñusta Kawsay. Todos los derechos reservados.</p>
+            <a id="footer-privacy" href="./pages/politicaPrivacidad.html">Política de privacidad</a>
+            <a id="footer-about" href="./pages/acercaDe.html">Acerca de</a>
+            <a id="footer-social" href="#">Síguenos en redes sociales</a>
         </div>
     </footer>
 
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Cambiar el contenido dinámicamente
+        document.getElementById('language-toggle').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('language-label').textContent = 'Kichwa';
+                localStorage.setItem('nusta-idioma', 'kichwa');
+                changeLanguage('kichwa');
+            } else {
+                document.getElementById('language-label').textContent = 'Español';
+                localStorage.setItem('nusta-idioma', 'espanol');
+                changeLanguage('espanol');
             }
         });
-    }, { threshold: 0.15 });
 
-    document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
-        observer.observe(el);
-    });
-});
-</script>
+        function changeLanguage(language) {
+            if (language === 'kichwa') {
+                document.getElementById('features-title').textContent = 'Ñusta Kawsaykuna Ñan';
+                document.getElementById('feature1').textContent = 'Ñukanchik Yuyari Kawsay: Ñukanchikmi wiñaykuna, chaymi chakisqa kañiñan.';
+                document.getElementById('feature2').textContent = 'Ñukanchik Ñawpaq Yuyari: Kawsaykunata yuyarishka, chaymi umallakta chaymi rikch’a.';
+                document.getElementById('feature3').textContent = 'Kawsaykuna Ñukanchik Chaymi: Ñukanchik warmikuna, ñawpa kawsay, riksikuna yachaykuna.';
+                document.getElementById('download-title').textContent = 'Rikch’a Ñusta Kawsay App';
+                document.getElementById('purpose-title').textContent = 'Ñusta Kawsayka Kikinka';
+                document.getElementById('purpose-text').textContent = 'Ñusta Kawsaykuna chaykuna tukuy pachakuna chinkaykuna...';
+                document.getElementById('testimonials-title').textContent = 'Ñawpaq Ñan';
+                document.getElementById('testimonial1').textContent = '“Ñusta Kawsaymi ñukanchik chaypiwiwi.”';
+                document.getElementById('testimonial1-author').textContent = '- María, ñusta';
+                document.getElementById('testimonial2').textContent = '“Ñusta Kawsaymi wiñaymi riksishka riksina.”';
+                document.getElementById('testimonial2-author').textContent = '- Ana, ñusta';
+                document.getElementById('download-section-title').textContent = 'Ñawpa Ñusta Kawsay App Rikch’a';
+                document.getElementById('download-btn').textContent = 'Rikch’a Ñusta Kawsay Android';
+                document.getElementById('companeros-title').textContent = 'Ñukanchik Llikch’a Ñawpa';
+                document.getElementById('companion1').textContent = 'SIRMA';
+                document.getElementById('companion2').textContent = 'Visit Chugchilan';
+                document.getElementById('companion3').textContent = 'Ñusta Kawsayka Llikch’a';
+                document.getElementById('redes-title').textContent = 'Ñukanchik Yachaykuna';
+                document.getElementById('footer-copy').textContent = '© 2025 Ñusta Kawsay. Ñukanchik Sumaq.';
+                document.getElementById('footer-privacy').textContent = 'Ñawpa Ñustakuna';
+                document.getElementById('footer-about').textContent = 'Ñusta Kawsayka Ñukanchik';
+                document.getElementById('footer-social').textContent = 'Ñukanchik Yachaykuna Ñawpaq Ñan';
+            } else {
+                document.getElementById('features-title').textContent = 'Características de Ñusta Kawsay';
+                document.getElementById('feature1').textContent = 'Botón de Pánico: Envía tu ubicación y alerta a tus contactos de confianza.';
+                document.getElementById('feature2').textContent = 'Información Personal: Comparte datos importantes como tu tipo de sangre, peso y más.';
+                document.getElementById('feature3').textContent = 'Contactos de Emergencia: Involucra a tus familiares o autoridades con un solo toque.';
+                document.getElementById('download-title').textContent = 'Descarga la app';
+                document.getElementById('purpose-title').textContent = '¿Cuál es el propósito de Ñusta Kawsay?';
+                document.getElementById('purpose-text').textContent = 'Ñusta Kawsay nace como una opción segura para mujeres que se encuentran en situaciones de peligro o violencia de género. Nuestra app permite pedir ayuda de manera rápida, segura y discreta, conectando a las usuarias con sus contactos de confianza y servicios de emergencia, brindando protección y tranquilidad en los momentos más críticos.';
+                document.getElementById('testimonials-title').textContent = 'Lo que dicen nuestras usuarias';
+                document.getElementById('testimonial1').textContent = '“Ñusta Kawsay me dio tranquilidad en un momento difícil.”';
+                document.getElementById('testimonial1-author').textContent = '- María, usuaria';
+                document.getElementById('testimonial2').textContent = '“La app es fácil de usar y me siento más segura.”';
+                document.getElementById('testimonial2-author').textContent = '- Ana, usuaria';
+                document.getElementById('download-section-title').textContent = 'Descarga Ñusta Kawsay App';
+                document.getElementById('download-btn').textContent = 'Descargar Ñusta Kawsay para Android';
+                document.getElementById('companeros-title').textContent = 'Visita las páginas de mis compañeros';
+                document.getElementById('companion1').textContent = 'SIRMA';
+                document.getElementById('companion2').textContent = 'Visit Chugchilan';
+                document.getElementById('companion3').textContent = 'Ñusta Kawsayka Llikch’a';
+                document.getElementById('redes-title').textContent = 'Síguenos en nuestras redes';
+                document.getElementById('footer-copy').textContent = '© 2025 Ñusta Kawsay. Todos los derechos reservados.';
+                document.getElementById('footer-privacy').textContent = 'Política de privacidad';
+                document.getElementById('footer-about').textContent = 'Acerca de';
+                document.getElementById('footer-social').textContent = 'Síguenos en redes sociales';
+            }
+ 
+            if (language === 'kichwa') {
+                document.getElementById('nav-inicio').textContent = 'Ñawpa';
+                document.getElementById('nav-caracteristicas').textContent = 'Ñusta Kawsaykuna';
+                document.getElementById('nav-testimonios').textContent = 'Ñawpaq Ñan';
+                document.getElementById('nav-descarga').textContent = 'Rikch’a';
+            } else {
+                document.getElementById('nav-inicio').textContent = 'Inicio';
+                document.getElementById('nav-caracteristicas').textContent = 'Características';
+                document.getElementById('nav-testimonios').textContent = 'Testimonios';
+                document.getElementById('nav-descarga').textContent = 'Descarga';
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // ...tu código de observer...
+
+            // Revisar idioma guardado
+            const idiomaGuardado = localStorage.getItem('nusta-idioma');
+            if (idiomaGuardado === 'kichwa') {
+                document.getElementById('language-toggle').checked = true;
+                document.getElementById('language-label').textContent = 'Kichwa';
+                changeLanguage('kichwa');
+            } else {
+                document.getElementById('language-toggle').checked = false;
+                document.getElementById('language-label').textContent = 'Español';
+                changeLanguage('espanol');
+            }
+        });
+    </script>
 </body>
 </html>
