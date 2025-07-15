@@ -395,3 +395,17 @@ footer a:hover {
     background: #fff;
     color: #8255a1;
 }
+.video-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.video-vertical iframe {
+  width: 360px; /* o 320px si lo prefieres más angosto */
+  height: 640px; /* relación 9:16 vertical */
+  border: none;
+}

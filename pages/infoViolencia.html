@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title id="violence-title-head">Violencia de Género – Información y Acción</title>
@@ -15,12 +16,14 @@
       margin: 0;
       padding: 0;
     }
+
     .main-nav {
       background: #aa7cc5;
       width: 100%;
       position: relative;
       z-index: 100;
     }
+
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -30,6 +33,7 @@
       padding: 0 32px;
       height: 100px;
     }
+
     .logo {
       font-family: 'Montserrat', Arial, sans-serif !important;
       font-size: 2.2rem;
@@ -40,6 +44,7 @@
       margin-right: 40px;
       white-space: nowrap;
     }
+
     .main-nav ul {
       list-style: none;
       display: flex;
@@ -47,6 +52,7 @@
       margin: 0;
       padding: 0;
     }
+
     .main-nav ul li a {
       color: #fff;
       text-decoration: none;
@@ -55,31 +61,39 @@
       font-family: 'Quicksand', Arial, sans-serif;
       font-weight: 600;
     }
+
     #language-switcher {
       display: flex;
       align-items: center;
       gap: 10px;
       margin-left: 24px;
     }
+
     .switch {
       position: relative;
       display: inline-block;
       width: 54px;
       height: 28px;
     }
+
     .switch input {
       opacity: 0;
       width: 0;
       height: 0;
     }
+
     .slider {
       position: absolute;
       cursor: pointer;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background-color: #ccc;
       transition: 0.4s;
       border-radius: 28px;
     }
+
     .slider:before {
       position: absolute;
       content: "";
@@ -91,17 +105,21 @@
       transition: 0.4s;
       border-radius: 50%;
     }
-    input:checked + .slider {
+
+    input:checked+.slider {
       background-color: #aa7cc5;
     }
-    input:checked + .slider:before {
+
+    input:checked+.slider:before {
       transform: translateX(26px);
     }
+
     #language-label {
       font-size: 1rem;
       color: #222;
       font-weight: bold;
     }
+
     .violence-container {
       background: #fff;
       max-width: 900px;
@@ -110,34 +128,42 @@
       border-radius: 28px;
       box-shadow: 0 6px 32px rgba(170, 124, 197, 0.18);
     }
-    h1, h2 {
+
+    h1,
+    h2 {
       color: #aa7cc5;
       font-family: 'Montserrat', Arial, sans-serif;
       margin-bottom: 18px;
     }
+
     h1 {
       font-size: 2.1rem;
       text-align: center;
       margin-bottom: 28px;
     }
+
     h2 {
       font-size: 1.35rem;
       margin-top: 38px;
       margin-bottom: 14px;
     }
+
     .stats {
       font-size: 1.08rem;
       margin: 10px 0;
       color: #8255a1;
     }
+
     ul {
       padding-left: 22px;
       margin-bottom: 0;
     }
+
     li {
       margin-bottom: 10px;
       font-size: 1.08rem;
     }
+
     .cta {
       background: #aa7cc5;
       color: white;
@@ -148,6 +174,7 @@
       font-size: 1.15rem;
       box-shadow: 0 2px 12px rgba(170, 124, 197, 0.12);
     }
+
     a.button {
       background: #8255a1;
       color: white;
@@ -160,9 +187,11 @@
       font-size: 1.08rem;
       transition: background 0.2s;
     }
+
     a.button:hover {
       background: #aa7cc5;
     }
+
     footer {
       background: #aa7cc5;
       color: #fff;
@@ -172,19 +201,56 @@
       margin-top: 40px;
       border-radius: 0 0 20px 20px;
     }
+
+    .infografia-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f5fb;
+      border-radius: 20px;
+      box-shadow: 0 4px 18px rgba(170, 124, 197, 0.12);
+      text-align: center;
+    }
+
+    .infografia-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .infografia-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(130, 85, 161, 0.15);
+      margin-top: 12px;
+    }
+
+    .infografia-descripcion {
+      font-size: 1.05rem;
+      color: #555;
+      margin-top: 18px;
+      font-family: 'Quicksand', sans-serif;
+      max-width: 750px;
+    }
+
+
     @media (max-width: 700px) {
       .violence-container {
         padding: 18px 4vw;
       }
+
       h1 {
         font-size: 1.2rem;
       }
+
       h2 {
         font-size: 1.08rem;
       }
     }
   </style>
 </head>
+
 <body>
   <nav class="main-nav">
     <div class="nav-container">
@@ -194,6 +260,7 @@
         <li><a href="infoViolencia.html" id="nav-violencia">Violencia</a></li>
         <li><a href="politicaPrivacidad.html" id="nav-privacidad">Privacidad</a></li>
         <li><a href="acercaDe.html" id="nav-acerca">Acerca de</a></li>
+        <li><a href="comoUsar.html" id="nav-como-usar">Como Usar</a></li>
       </ul>
       <div id="language-switcher">
         <label for="language-toggle" class="switch">
@@ -207,16 +274,20 @@
   <div class="violence-container">
     <header>
       <h1 id="violence-title">Una de cada tres mujeres sufre violencia física o sexual a lo largo de su vida</h1>
-      <p class="stats" id="violence-stat1">A nivel mundial, 1 de cada 3 mujeres ha sufrido violencia física y/o sexual.</p>
-      <p class="stats" id="violence-stat2">En Ecuador, 60,6 % de mujeres han vivido algún tipo de violencia de género (psicológica, física, sexual o patrimonial).</p>
+      <p class="stats" id="violence-stat1">A nivel mundial, 1 de cada 3 mujeres ha sufrido violencia física y/o sexual.
+      </p>
+      <p class="stats" id="violence-stat2">En Ecuador, 60,6 % de mujeres han vivido algún tipo de violencia de género
+        (psicológica, física, sexual o patrimonial).</p>
     </header>
     <section>
       <h2 id="violence-types-title">Tipos de violencia</h2>
       <ul>
-        <li id="violence-type1"><strong>Psicológica</strong>: el 53,9 % de mujeres en Ecuador ha experimentado este tipo.</li>
+        <li id="violence-type1"><strong>Psicológica</strong>: el 53,9 % de mujeres en Ecuador ha experimentado este
+          tipo.</li>
         <li id="violence-type2"><strong>Física</strong>: afecta al 38,0 % de mujeres en Ecuador.</li>
         <li id="violence-type3"><strong>Sexual</strong>: 1 de cada 4 mujeres en Ecuador ha sido víctima.</li>
-        <li id="violence-type4"><strong>Patrimonial</strong>: 16,7 % de mujeres en Ecuador han sufrido control financiero.</li>
+        <li id="violence-type4"><strong>Patrimonial</strong>: 16,7 % de mujeres en Ecuador han sufrido control
+          financiero.</li>
         <li id="violence-type5"><strong>Gineco-obstétrica</strong>: incluye violencia durante atención médica.</li>
       </ul>
     </section>
@@ -226,42 +297,65 @@
         <li id="violence-key1">Globalmente, el 35 % de las mujeres han sufrido violencia física o sexual.</li>
         <li id="violence-key2">El 30 % de las mujeres en relaciones han sufrido violencia de pareja.</li>
         <li id="violence-key3">El 38 % de los homicidios de mujeres son cometidos por la pareja.</li>
-        <li id="violence-key4">El 24 % de las adolescentes de 15‑19 años han sufrido violencia por parte de su pareja.</li>
+        <li id="violence-key4">El 24 % de las adolescentes de 15‑19 años han sufrido violencia por parte de su pareja.
+        </li>
       </ul>
     </section>
     <section>
       <h2 id="violence-risk-title">Factores de riesgo y causas</h2>
-      <p id="violence-risk-text">Algunos de los factores asociados son: bajo nivel educativo, experiencias de violencia en la infancia y normas culturales que normalizan la desigualdad.</p>
+      <p id="violence-risk-text">Algunos de los factores asociados son: bajo nivel educativo, experiencias de violencia
+        en la infancia y normas culturales que normalizan la desigualdad.</p>
     </section>
     <section>
       <h2 id="violence-health-title">Impacto en la salud</h2>
-      <p id="violence-health-text">La violencia de género es una grave violación de derechos humanos y un problema de salud pública. Afecta la salud física, mental, sexual y reproductiva de las mujeres.</p>
+      <p id="violence-health-text">La violencia de género es una grave violación de derechos humanos y un problema de
+        salud pública. Afecta la salud física, mental, sexual y reproductiva de las mujeres.</p>
     </section>
     <section>
       <h2 id="violence-legal-title">Marco legal y compromiso institucional</h2>
-      <p id="violence-legal-text">En Ecuador, la violencia de género se reconoce como discriminación y está en línea con la ODS 5, la Convención de Belém do Pará y CEDAW.</p>
+      <p id="violence-legal-text">En Ecuador, la violencia de género se reconoce como discriminación y está en línea con
+        la ODS 5, la Convención de Belém do Pará y CEDAW.</p>
     </section>
     <section>
       <h2 id="violence-prevent-title">Prevención y respuesta</h2>
-      <p id="violence-prevent-text1">Organismos como la OMS/OPS recomiendan una respuesta multisectorial: salud, justicia, educación y formación para detección temprana.</p>
-      <p id="violence-prevent-text2">Campañas globales como #NoHayExcusa y la Iniciativa Spotlight promueven la erradicación de esta violencia.</p>
+      <p id="violence-prevent-text1">Organismos como la OMS/OPS recomiendan una respuesta multisectorial: salud,
+        justicia, educación y formación para detección temprana.</p>
+      <p id="violence-prevent-text2">Campañas globales como #NoHayExcusa y la Iniciativa Spotlight promueven la
+        erradicación de esta violencia.</p>
     </section>
     <section class="cta">
       <h2 id="violence-action-title">Llamados a la acción</h2>
       <p id="violence-action1">✅ <strong>Educa:</strong> Aprende a identificar los tipos de violencia.</p>
-      <p id="violence-action2">✅ <strong>Denuncia:</strong> Contacta ministerios, líneas de ayuda e institutos especializados.</p>
+      <p id="violence-action2">✅ <strong>Denuncia:</strong> Contacta ministerios, líneas de ayuda e institutos
+        especializados.</p>
       <p id="violence-action3">✅ <strong>Apoya:</strong> Acompaña a las víctimas y promueve la prevención.</p>
       <p id="violence-action4">✅ <strong>Exige:</strong> Políticas públicas efectivas y fondos para igualdad.</p>
       <a href="#recursos" class="button" id="violence-action-btn">Conoce los recursos disponibles</a>
     </section>
+
+    <section class="infografia-section">
+      <h2 style="text-align: center; color: #aa7cc5; font-family: 'Montserrat', sans-serif;">Infografía: ¿Por qué Ñusta
+        Kawsay es importante?</h2>
+      <div class="infografia-container">
+        <img src="../images/infografiNustaKawsay.png" alt="Infografía sobre violencia de género y Ñusta Kawsay"
+          class="infografia-img">
+        <p class="infografia-descripcion">
+          Esta infografía resume los principales datos sobre violencia de género y cómo la app Ñusta Kawsay actúa como
+          herramienta de emergencia, prevención y empoderamiento para mujeres rurales.
+        </p>
+      </div>
+    </section>
+
     <section id="recursos">
       <h2 id="violence-resource-title">Recursos y enlaces útiles</h2>
       <ul>
-        <li><a href="https://www.ecuadorencifras.gob.ec/violencia-de-genero/">INEC – Violencia de Género en Ecuador</a></li>
+        <li><a href="https://www.ecuadorencifras.gob.ec/violencia-de-genero/">INEC – Violencia de Género en Ecuador</a>
+        </li>
         <li><a href="https://www.unwomen.org/">ONU Mujeres – Datos y cifras globales</a></li>
         <li><a href="https://www.paho.org/">OPS/OMS – Violencia contra la mujer en las Américas</a></li>
         <li><a href="https://www.unesco.org/">UNESCO – Campaña #NoHayExcusa</a></li>
-        <li><a href="https://www.unwomen.org/global-database-on-violence-against-women">Global database ONU Mujeres</a></li>
+        <li><a href="https://www.unwomen.org/global-database-on-violence-against-women">Global database ONU Mujeres</a>
+        </li>
       </ul>
     </section>
   </div>
@@ -272,7 +366,7 @@
     <a id="footer-social" href="#">Síguenos en redes sociales</a>
   </footer>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       // Idioma persistente
       const idiomaGuardado = localStorage.getItem('nusta-idioma');
       if (idiomaGuardado === 'kichwa') {
@@ -285,7 +379,7 @@
         changeLanguage('espanol');
       }
 
-      document.getElementById('language-toggle').addEventListener('change', function() {
+      document.getElementById('language-toggle').addEventListener('change', function () {
         if (this.checked) {
           document.getElementById('language-label').textContent = 'Kichwa';
           localStorage.setItem('nusta-idioma', 'kichwa');
@@ -385,4 +479,5 @@
     }
   </script>
 </body>
+
 </html>
